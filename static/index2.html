@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornerbytes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins";
+            padding: 50px 20px;
+            /* Padding adjusted for mobile devices */
+            background: #fdfd96ff;
+            margin: 0;
+            /* Reset margin to ensure no space around the body */
+        }
+
+        .rectangle {
+            width: 150px;
+            height: 65px;
+            background: pink;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            box-shadow: 10px 10px 1px #222222ff;
+            border-color: black;
+            outline: 2px solid black;
+            font-weight: 500;
+            margin-right: 10px;
+            font-size: larger;
+        }
+
+        .rectangle:hover {
+            transform: scale(1.1);
+        }
+
+        .parentrect {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow children to wrap to next line on smaller screens */
+            justify-content: center;
+            /* Center children horizontally */
+        }
+
+        .bigrect {
+            width: 100%;
+            /* Adjust width to fill the available space */
+            background: #daf5f0ff;
+            border-radius: 10px;
+            box-shadow: 20px 20px 1px #222222ff;
+            border-color: black;
+            outline: 3px solid black;
+            font-weight: 500;
+            margin-top: 50px;
+            overflow-x: auto;
+            /* Allow horizontal scrolling on smaller screens */
+        }
+
+        @media only screen and (min-width: 1024px) {
+
+            /* Desktop styles */
+            .bigrect {
+                max-width: 70%;
+                /* Adjust this value as needed */
+            }
+        }
+
+        .bigrect2 {
+            width: 70%;
+            /* Adjust width to fill the available space */
+            background: #daf5f0ff;
+            border-radius: 10px;
+            box-shadow: 20px 20px 1px #222222ff;
+            border-color: black;
+            outline: 3px solid black;
+            font-weight: 500;
+            margin-top: 50px;
+            overflow-x: auto;
+
+            /* Allow horizontal scrolling on smaller screens */
+        }
+
+        table {
+            width: 100%;
+            /* Make table fill the container */
+            border-collapse: collapse;
+            /* Collapse borders */
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            /* Add border to table cells */
+            padding: 8px;
+            /* Add padding to table cells */
+        }
+
+        th:nth-child(1) {
+            background: #69d2e7ff;
+            width: 20%;
+            /* Adjust width for the first column */
+        }
+
+        th:nth-child(2) {
+            background: #69d2e7ff;
+            width: 80%;
+            /* Adjust width for the second column */
+        }
+
+        @media (max-width: 768px) {
+            .rectangle {
+                width: calc(33.33% - 10px);
+                /* Adjust width for smaller screens */
+            }
+        }
+
+        a {
+            color: black;
+            text-decoration: none
+        }
+
+        a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parentrect">
+        <a href="index2.html" class="rectangle" style="background: #fdc902ff;">Home</a>
+        <a href="index2.html" class="rectangle" style="background: #ff69b4ff;">Blog</a>
+        <a href="index2.html" class="rectangle" style="background: #a8c7ffff;">Contact</a>
+    </div>
+
+    <div class="parentrect">
+        <div class="bigrect">
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Title</th>
+                </tr>
+                <tr>
+                    <td>date goes here</td>
+                    <td>Dulu antar jemput sekarang pulang sendiri</td>
+                </tr>
+                <tr>
+                    <td>2023-12-13 15:44:38</td>
+                    <td>i made my own website</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bigrect">
+            <p style="text-indent: 15px;">My contact : </p>
+            <menu>
+                <li>test (twitter goes here)</li>
+                <li>github in herer</li>
+            </menu>
+        </div>
+    </div>
+</body>
+
+</html>
